@@ -709,4 +709,11 @@ public class GestureImageView extends ImageView  {
 	public int getDeviceOrientation() {
 		return deviceOrientation;
 	}
+
+    public boolean isZoomed() {
+        if (gestureImageViewTouchListener != null) {
+            return gestureImageViewTouchListener.isZoomed();
+        }
+        return false;
+    }
 }
